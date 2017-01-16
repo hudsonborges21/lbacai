@@ -1,0 +1,17 @@
+D:\LBAÇAI\LBAcai\LBAcai\bin\Debug\LBAcai.exe.config
+D:\LBAÇAI\LBAcai\LBAcai\bin\Debug\LBAcai.exe
+D:\LBAÇAI\LBAcai\LBAcai\bin\Debug\LBAcai.pdb
+D:\LBAÇAI\LBAcai\LBAcai\bin\Debug\EntityFramework.dll
+D:\LBAÇAI\LBAcai\LBAcai\bin\Debug\EntityFramework.SqlServer.dll
+D:\LBAÇAI\LBAcai\LBAcai\bin\Debug\EntityFramework.xml
+D:\LBAÇAI\LBAcai\LBAcai\bin\Debug\EntityFramework.SqlServer.xml
+D:\LBAÇAI\LBAcai\LBAcai\obj\Debug\LBAcai.FrmPrincipal.resources
+D:\LBAÇAI\LBAcai\LBAcai\obj\Debug\LBAcai.FrmProduto.resources
+D:\LBAÇAI\LBAcai\LBAcai\obj\Debug\LBAcai.Properties.Resources.resources
+D:\LBAÇAI\LBAcai\LBAcai\obj\Debug\LBAcai.csproj.GenerateResource.Cache
+D:\LBAÇAI\LBAcai\LBAcai\obj\Debug\LBAcai.exe
+D:\LBAÇAI\LBAcai\LBAcai\obj\Debug\LBAcai.pdb
+D:\LBAÇAI\LBAcai\LBAcai\obj\Debug\LBAcai.csprojResolveAssemblyReference.cache
+C:\LBAÇAI\LBAcai\LBAcai\bin\Debug\LBAcai.exe.config
+C:\LBAÇAI\LBAcai\LBAcai\obj\Debug\LBAcai.exe
+C:\LBAÇAI\LBAcai\LBAcai\obj\Debug\LBAcai.pdb
