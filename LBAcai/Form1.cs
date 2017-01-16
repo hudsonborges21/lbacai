@@ -21,6 +21,12 @@ namespace LBAcai
              FrmProduto frm = new FrmProduto();
             frm.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmCliente frm = new FrmCliente();
+            frm.ShowDialog();
+        }
         }
   }
 

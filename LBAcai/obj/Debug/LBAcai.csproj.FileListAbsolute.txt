@@ -18,3 +18,15 @@ C:\LBAÇAI\LBAcai\LBAcai\obj\Debug\LBAcai.pdb
 C:\LBAÇAI\LBAcai\bin\Debug\LBAcai.exe.config
 C:\LBAÇAI\LBAcai\obj\Debug\LBAcai.exe
 C:\LBAÇAI\LBAcai\obj\Debug\LBAcai.pdb
+C:\LBAÇAI\LBAcai\bin\Debug\LBAcai.exe
+C:\LBAÇAI\LBAcai\bin\Debug\LBAcai.pdb
+C:\LBAÇAI\LBAcai\bin\Debug\EntityFramework.dll
+C:\LBAÇAI\LBAcai\bin\Debug\EntityFramework.SqlServer.dll
+C:\LBAÇAI\LBAcai\bin\Debug\EntityFramework.xml
+C:\LBAÇAI\LBAcai\bin\Debug\EntityFramework.SqlServer.xml
+C:\LBAÇAI\LBAcai\obj\Debug\LBAcai.csprojResolveAssemblyReference.cache
+C:\LBAÇAI\LBAcai\obj\Debug\LBAcai.FrmPrincipal.resources
+C:\LBAÇAI\LBAcai\obj\Debug\LBAcai.FrmProduto.resources
+C:\LBAÇAI\LBAcai\obj\Debug\LBAcai.Properties.Resources.resources
+C:\LBAÇAI\LBAcai\obj\Debug\LBAcai.csproj.GenerateResource.Cache
+C:\LBAÇAI\LBAcai\obj\Debug\LBAcai.FrmCliente.resources

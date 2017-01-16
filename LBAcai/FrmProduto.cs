@@ -34,6 +34,7 @@ namespace LBAcai
                 dataGridView1.DataSource = crt.ToList();
                 db.Dispose();
             }
+            Habilitar();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
