@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.BtnIncluir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.BtnConfirmar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.TBPrecoAvista = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.MTelCelular = new System.Windows.Forms.MaskedTextBox();
+            this.MTelFixo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.TBMarca = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.TBCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,29 +66,32 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(728, 217);
             this.dataGridView1.TabIndex = 44;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(126, 360);
+            this.btnExcluir.Location = new System.Drawing.Point(148, 360);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(89, 26);
             this.btnExcluir.TabIndex = 43;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // BtnIncluir
             // 
-            this.BtnIncluir.Location = new System.Drawing.Point(31, 360);
+            this.BtnIncluir.Location = new System.Drawing.Point(53, 360);
             this.BtnIncluir.Name = "BtnIncluir";
             this.BtnIncluir.Size = new System.Drawing.Size(89, 26);
             this.BtnIncluir.TabIndex = 42;
             this.BtnIncluir.Text = "Incluir";
             this.BtnIncluir.UseVisualStyleBackColor = true;
+            this.BtnIncluir.Click += new System.EventHandler(this.BtnIncluir_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Enabled = false;
-            this.btnCancelar.Location = new System.Drawing.Point(608, 360);
+            this.btnCancelar.Location = new System.Drawing.Point(576, 360);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 26);
             this.btnCancelar.TabIndex = 41;
@@ -98,19 +101,20 @@
             // BtnConfirmar
             // 
             this.BtnConfirmar.Enabled = false;
-            this.BtnConfirmar.Location = new System.Drawing.Point(513, 360);
+            this.BtnConfirmar.Location = new System.Drawing.Point(481, 360);
             this.BtnConfirmar.Name = "BtnConfirmar";
             this.BtnConfirmar.Size = new System.Drawing.Size(89, 26);
             this.BtnConfirmar.TabIndex = 40;
             this.BtnConfirmar.Text = "Confirmar";
             this.BtnConfirmar.UseVisualStyleBackColor = true;
+            this.BtnConfirmar.Click += new System.EventHandler(this.BtnConfirmar_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.TBPrecoAvista);
+            this.groupBox1.Controls.Add(this.MTelCelular);
+            this.groupBox1.Controls.Add(this.MTelFixo);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.TBMarca);
             this.groupBox1.Controls.Add(this.label5);
@@ -125,24 +129,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastro do Produto";
             // 
-            // maskedTextBox1
+            // label2
             // 
-            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.maskedTextBox1.Location = new System.Drawing.Point(529, 35);
-            this.maskedTextBox1.Mask = "00000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(161, 20);
-            this.maskedTextBox1.TabIndex = 18;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(526, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Telefone Fixo";
             // 
-            // TBPrecoAvista
+            // MTelCelular
             // 
-            this.TBPrecoAvista.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBPrecoAvista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBPrecoAvista.Location = new System.Drawing.Point(529, 74);
-            this.TBPrecoAvista.MaxLength = 8;
-            this.TBPrecoAvista.Name = "TBPrecoAvista";
-            this.TBPrecoAvista.Size = new System.Drawing.Size(161, 23);
-            this.TBPrecoAvista.TabIndex = 11;
+            this.MTelCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MTelCelular.Location = new System.Drawing.Point(529, 35);
+            this.MTelCelular.Mask = "00000-0000";
+            this.MTelCelular.Name = "MTelCelular";
+            this.MTelCelular.Size = new System.Drawing.Size(161, 20);
+            this.MTelCelular.TabIndex = 18;
+            this.MTelCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MTelCelular_KeyPress);
+            // 
+            // MTelFixo
+            // 
+            this.MTelFixo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MTelFixo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTelFixo.Location = new System.Drawing.Point(529, 74);
+            this.MTelFixo.MaxLength = 8;
+            this.MTelFixo.Name = "MTelFixo";
+            this.MTelFixo.Size = new System.Drawing.Size(161, 23);
+            this.MTelFixo.TabIndex = 11;
+            this.MTelFixo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MTelFixo_KeyPress);
             // 
             // label9
             // 
@@ -163,6 +178,7 @@
             this.TBMarca.Name = "TBMarca";
             this.TBMarca.Size = new System.Drawing.Size(421, 23);
             this.TBMarca.TabIndex = 5;
+            this.TBMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBMarca_KeyPress);
             // 
             // label5
             // 
@@ -182,6 +198,7 @@
             this.TBDescricao.Name = "TBDescricao";
             this.TBDescricao.Size = new System.Drawing.Size(366, 23);
             this.TBDescricao.TabIndex = 4;
+            this.TBDescricao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBDescricao_KeyPress);
             // 
             // label4
             // 
@@ -212,15 +229,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(526, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Telefone Fixo";
-            // 
             // Codigo
             // 
             this.Codigo.DataPropertyName = "ID";
@@ -240,10 +248,10 @@
             // Celular
             // 
             this.Celular.DataPropertyName = "Celular";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Celular.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Celular.DefaultCellStyle = dataGridViewCellStyle2;
             this.Celular.HeaderText = "Tel. Celular";
             this.Celular.Name = "Celular";
             this.Celular.ReadOnly = true;
@@ -264,6 +272,7 @@
             this.Name = "FrmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.FrmCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -279,8 +288,8 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button BtnConfirmar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox TBPrecoAvista;
+        private System.Windows.Forms.MaskedTextBox MTelCelular;
+        private System.Windows.Forms.TextBox MTelFixo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TBMarca;
         private System.Windows.Forms.Label label5;

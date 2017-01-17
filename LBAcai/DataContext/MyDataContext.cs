@@ -13,10 +13,11 @@ namespace LBAcai.DataContext
         public MyDataContext()
             : base("MyConnectionString")
         {
-            //Database.SetInitializer<MyDataContext>(new Initializer());   
+          // Database.SetInitializer<MyDataContext>(new Initializer());   
         }
 
         public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
         
 
         //usar MAPING PARA CRIAR ESTRUTURA DO BANCO DE DADOS
@@ -25,6 +26,7 @@ namespace LBAcai.DataContext
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Configurations.Add(new ProdutoMap());
+            modelBuilder.Configurations.Add(new ClienteMap());
             
         }
     }
@@ -35,10 +37,17 @@ namespace LBAcai.DataContext
             context.Produtos.Add(new Produto { Id = 1, Nome = "AÇAI", Preco = 9 });
             context.Produtos.Add(new Produto { Id = 2, Nome = "LEITE NINHO", Preco = 1 });
             context.Produtos.Add(new Produto { Id = 3, Nome = "LEITE CONDENÇADO", Preco = 1 });
-            context.Produtos.Add(new Produto { Id = 1, Nome = "GRANOLA", Preco = 1 });
-            context.Produtos.Add(new Produto { Id = 1, Nome = "BANANA", Preco = 1 });
-            context.Produtos.Add(new Produto { Id = 1, Nome = "PAÇOCA", Preco = 1 });
-            context.Produtos.Add(new Produto { Id = 1, Nome = "BACON", Preco = 1 });
+            context.Produtos.Add(new Produto { Id = 4, Nome = "GRANOLA", Preco = 1 });
+            context.Produtos.Add(new Produto { Id = 5, Nome = "BANANA", Preco = 1 });
+            context.Produtos.Add(new Produto { Id = 6, Nome = "PAÇOCA", Preco = 1 });
+            context.Produtos.Add(new Produto { Id = 7, Nome = "BACON", Preco = 1 });
+
+            context.Clientes.Add(new Cliente { Id = 1, Nome = "HUDSON BORGES SANT ANA" });
+            context.Clientes.Add(new Cliente { Id = 2, Nome = "FERNANDA" });
+            context.Clientes.Add(new Cliente { Id = 3, Nome = "RAYNE" });
+            context.Clientes.Add(new Cliente { Id = 4, Nome = "CLAYTON" });
+            context.Clientes.Add(new Cliente { Id = 5, Nome = "MANO" });
+            context.Clientes.Add(new Cliente { Id = 6, Nome = "DANILO CARLOS" });
 
             context.SaveChanges();
             base.Seed(context);
