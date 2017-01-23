@@ -17,6 +17,8 @@ namespace LBAcai.Domain
         
         public string Observacao { get; set; }
 
+        public string Adicional { get; set; }
+
         public Double Estoque { get; set; }
 
         public Decimal Preco { get; set; }

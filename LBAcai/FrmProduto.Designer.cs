@@ -46,6 +46,8 @@
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TBAdicional = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -150,20 +152,20 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(108, 337);
+            this.btnExcluir.Location = new System.Drawing.Point(104, 377);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(89, 26);
-            this.btnExcluir.TabIndex = 37;
+            this.btnExcluir.TabIndex = 7;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // BtnIncluir
             // 
-            this.BtnIncluir.Location = new System.Drawing.Point(13, 337);
+            this.BtnIncluir.Location = new System.Drawing.Point(9, 377);
             this.BtnIncluir.Name = "BtnIncluir";
             this.BtnIncluir.Size = new System.Drawing.Size(89, 26);
-            this.BtnIncluir.TabIndex = 36;
+            this.BtnIncluir.TabIndex = 7;
             this.BtnIncluir.Text = "Incluir";
             this.BtnIncluir.UseVisualStyleBackColor = true;
             this.BtnIncluir.Click += new System.EventHandler(this.BtnIncluir_Click);
@@ -171,10 +173,10 @@
             // btnCancelar
             // 
             this.btnCancelar.Enabled = false;
-            this.btnCancelar.Location = new System.Drawing.Point(432, 337);
+            this.btnCancelar.Location = new System.Drawing.Point(428, 377);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 26);
-            this.btnCancelar.TabIndex = 35;
+            this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -182,10 +184,10 @@
             // BtnConfirmar
             // 
             this.BtnConfirmar.Enabled = false;
-            this.BtnConfirmar.Location = new System.Drawing.Point(337, 337);
+            this.BtnConfirmar.Location = new System.Drawing.Point(333, 377);
             this.BtnConfirmar.Name = "BtnConfirmar";
             this.BtnConfirmar.Size = new System.Drawing.Size(89, 26);
-            this.BtnConfirmar.TabIndex = 34;
+            this.BtnConfirmar.TabIndex = 9;
             this.BtnConfirmar.Text = "Confirmar";
             this.BtnConfirmar.UseVisualStyleBackColor = true;
             this.BtnConfirmar.Click += new System.EventHandler(this.BtnConfirmar_Click);
@@ -233,12 +235,33 @@
             this.Preco.Name = "Preco";
             this.Preco.ReadOnly = true;
             // 
+            // TBAdicional
+            // 
+            this.TBAdicional.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TBAdicional.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBAdicional.Location = new System.Drawing.Point(31, 337);
+            this.TBAdicional.MaxLength = 1;
+            this.TBAdicional.Name = "TBAdicional";
+            this.TBAdicional.Size = new System.Drawing.Size(49, 23);
+            this.TBAdicional.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 321);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Adicional";
+            // 
             // FrmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(532, 375);
+            this.ClientSize = new System.Drawing.Size(532, 415);
+            this.Controls.Add(this.TBAdicional);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.BtnIncluir);
@@ -254,6 +277,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -276,5 +300,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn Preco;
+        private System.Windows.Forms.TextBox TBAdicional;
+        private System.Windows.Forms.Label label2;
     }
 }

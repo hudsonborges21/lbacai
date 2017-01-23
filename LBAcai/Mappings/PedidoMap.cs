@@ -7,28 +7,31 @@ using System.Text;
 
 namespace LBAcai.Mappings
 {
-    public class ProdutoMap : EntityTypeConfiguration<Produto>
+    public class PedidoMap : EntityTypeConfiguration<Pedido>
     {
-        public ProdutoMap()
+         public PedidoMap()
         {
-            ToTable("TblProduto");
+            ToTable("TblPedido");
 
             HasKey(x => x.Id);
 
-            Property(x => x.Nome)
-                .HasMaxLength(60)
+            Property(x => x.CodCliente)
+                .HasMaxLength(6)
                 .IsRequired();
 
             
             Property(x => x.Observacao)
                 .HasMaxLength(100);
  
-            Property(x => x.Preco)
+            Property(x => x.Data)
                 .IsRequired();
 
-            Property(x => x.Adicional)
-               .HasMaxLength(1);
+            Property(x => x.Desconto);
+
+            Property(x => x.Valor);
 
         }
+            
+
     }
 }

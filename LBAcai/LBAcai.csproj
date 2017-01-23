@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="DataContext\MyDataContext.cs" />
     <Compile Include="Domain\Cliente.cs" />
+    <Compile Include="Domain\Pedido.cs" />
     <Compile Include="Domain\Produto.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -86,6 +87,7 @@
       <DependentUpon>FrmProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Mappings\ClienteMap.cs" />
+    <Compile Include="Mappings\PedidoMap.cs" />
     <Compile Include="Mappings\ProdutoMap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

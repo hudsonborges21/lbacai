@@ -27,6 +27,12 @@ namespace LBAcai
             FrmCliente frm = new FrmCliente();
             frm.ShowDialog();
         }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            FrmPedido frm = new FrmPedido();
+            frm.ShowDialog();
+        }
         }
   }
 

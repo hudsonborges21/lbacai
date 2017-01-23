@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.btnProdutos = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnPedidos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProdutos
@@ -55,17 +56,30 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnPedidos
+            // 
+            this.btnPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedidos.Location = new System.Drawing.Point(218, 44);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.Size = new System.Drawing.Size(131, 136);
+            this.btnPedidos.TabIndex = 2;
+            this.btnPedidos.Text = "Pedidos";
+            this.btnPedidos.UseVisualStyleBackColor = true;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(884, 562);
+            this.Controls.Add(this.btnPedidos);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnProdutos);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LB AÇAI";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
@@ -74,6 +88,7 @@
 
         private System.Windows.Forms.Button btnProdutos;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPedidos;
     }
 }
 

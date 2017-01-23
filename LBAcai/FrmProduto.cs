@@ -49,6 +49,7 @@ namespace LBAcai
             TBCodigo.Text = Convert.ToString(contoso.Id);
             TBDescricao.Text = contoso.Nome;
             TBMarca.Text = contoso.Observacao;
+            TBAdicional.Text = contoso.Adicional;
             TBPrecoAvista.Text = Convert.ToString(contoso.Preco);
             
             db.Dispose();
@@ -151,6 +152,15 @@ namespace LBAcai
                     double valor = Convert.ToDouble(TBPrecoAvista.Text);
                 }
 
+                if (string.IsNullOrEmpty(TBAdicional.Text))
+                {
+                    TBAdicional.Text = " ";
+                }
+                else
+                {
+                    string valorAdicional = Convert.ToString(TBAdicional.Text);
+                }
+
                
                 //obj para gravar no banco de dados
                 MyDataContext db = new MyDataContext();
@@ -162,6 +172,7 @@ namespace LBAcai
                         Nome = TBDescricao.Text,
                         Observacao = TBMarca.Text,
                         Preco = Convert.ToDecimal(TBPrecoAvista.Text),
+                        Adicional = TBAdicional.Text,
                         
                     };
 
@@ -179,6 +190,7 @@ namespace LBAcai
                     
                     contoso.Nome = TBDescricao.Text;
                     contoso.Observacao = TBMarca.Text;
+                    contoso.Adicional = TBAdicional.Text;
                     
                     contoso.Preco = 0;
                     if (TBPrecoAvista.Text != "")
