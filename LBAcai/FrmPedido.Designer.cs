@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
@@ -39,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClienteNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Desconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +56,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Cliente,
+            this.ClienteNome,
             this.Data,
             this.Observacao,
             this.Desconto,
@@ -83,17 +87,21 @@
             // 
             this.maskedTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.maskedTextBox2.Location = new System.Drawing.Point(260, 42);
+            this.maskedTextBox2.Mask = "00/00/0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
             this.maskedTextBox2.TabIndex = 4;
+            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
             // 
             // maskedTextBox1
             // 
             this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.maskedTextBox1.Location = new System.Drawing.Point(80, 42);
+            this.maskedTextBox1.Mask = "00/00/0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
             this.maskedTextBox1.TabIndex = 3;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
             // button1
             // 
@@ -146,36 +154,59 @@
             this.Cliente.HeaderText = "Nome";
             this.Cliente.Name = "Cliente";
             this.Cliente.ReadOnly = true;
+            this.Cliente.Width = 80;
+            // 
+            // ClienteNome
+            // 
+            this.ClienteNome.HeaderText = "ClienteNome";
+            this.ClienteNome.Name = "ClienteNome";
+            this.ClienteNome.ReadOnly = true;
+            this.ClienteNome.Width = 230;
             // 
             // Data
             // 
             this.Data.DataPropertyName = "Data";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.Format = "d";
             dataGridViewCellStyle1.NullValue = null;
             this.Data.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Data.HeaderText = "Tel. Celular";
+            this.Data.HeaderText = "Data";
             this.Data.Name = "Data";
             this.Data.ReadOnly = true;
-            this.Data.Width = 130;
+            this.Data.Width = 80;
             // 
             // Observacao
             // 
+            this.Observacao.DataPropertyName = "Observacao";
             this.Observacao.HeaderText = "Observação";
             this.Observacao.Name = "Observacao";
             this.Observacao.ReadOnly = true;
+            this.Observacao.Width = 130;
             // 
             // Desconto
             // 
+            this.Desconto.DataPropertyName = "Desconto";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Desconto.DefaultCellStyle = dataGridViewCellStyle2;
             this.Desconto.HeaderText = "Desconto";
             this.Desconto.Name = "Desconto";
             this.Desconto.ReadOnly = true;
+            this.Desconto.Width = 80;
             // 
             // Valor
             // 
+            this.Valor.DataPropertyName = "Valor";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Valor.DefaultCellStyle = dataGridViewCellStyle3;
             this.Valor.HeaderText = "Valor";
             this.Valor.Name = "Valor";
             this.Valor.ReadOnly = true;
+            this.Valor.Width = 80;
             // 
             // FrmPedido
             // 
@@ -191,6 +222,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Pedidos";
             this.Load += new System.EventHandler(this.FrmPedido_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmPedido_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -210,6 +242,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Data;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observacao;
         private System.Windows.Forms.DataGridViewTextBoxColumn Desconto;

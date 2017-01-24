@@ -31,3 +31,4 @@ C:\LBAÇAI\LBAcai\obj\Debug\LBAcai.Properties.Resources.resources
 C:\LBAÇAI\LBAcai\obj\Debug\LBAcai.csproj.GenerateResource.Cache
 C:\LBAÇAI\LBAcai\obj\Debug\LBAcai.exe
 C:\LBAÇAI\LBAcai\obj\Debug\LBAcai.pdb
+C:\LBAÇAI\LBAcai\obj\Debug\LBAcai.csprojResolveAssemblyReference.cache
